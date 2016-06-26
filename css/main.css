@@ -1,29 +1,263 @@
-.sprite {
-    background-image: url(spritesheet.png);
-    background-repeat: no-repeat;
-    display: block;
+@font-face {
+    font-family: 'Amsdam Regular';
+    src: url('Amsdam Regular.eot');
+    src: local('Amsdam Regular'), local('Amsdam Regular'),
+         url('Amsdam Regular.eot?#iefix') format('embedded-opentype'),
+         url('Amsdam Regular.woff') format('woff'),
+         url('Amsdam Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.sprite-about-icon-awards {
-    width: 100px;
-    height: 100px;
-    background-position: -5px -5px;
+@font-face {
+    font-family: 'Montserrat';
+    src: url('montserrat-regular.eot');
+    src: local('montserrat-regular'), local('montserrat-regular'),
+         url('montserrat-regular.eot?#iefix') format('embedded-opentype'),
+         url('montserrat-regular.woff') format('woff'),
+         url('montserrat-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.sprite-about-icon-cjobs {
-    width: 100px;
-    height: 100px;
-    background-position: -115px -5px;
+@font-face {
+    font-family: 'Montserrat';
+    src: url('montserrat-bold.eot');
+    src: local('montserrat bold'), local('montserrat-bold'),
+         url('montserrat-bold.eot?#iefix') format('embedded-opentype'),
+         url('montserrat-bold.woff') format('woff'),
+         url('montserrat-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
 
-.sprite-about-icon-happy {
-    width: 100px;
-    height: 100px;
-    background-position: -225px -5px;
+@font-face {
+    font-family: 'Crimson Text';
+    src: url('crimsonText-Roman.eot');
+    src: local('crimsonText-Roman'), local('crimsonText-Roman'),
+         url('crimsonText-Roman.eot?#iefix') format('embedded-opentype'),
+         url('crimsonText-Roman.woff') format('woff'),
+         url('crimsonText-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.sprite-about-icon-reviews {
-    width: 100px;
-    height: 100px;
-    background-position: -335px -5px;
+@font-face {
+    font-family: 'Crimson Text';
+    src: url('crimsonText-Italic.eot');
+    src: local('crimsonText-Italic'), local('crimsonText-Italic'),
+         url('crimsonText-Italic.eot?#iefix') format('embedded-opentype'),
+         url('crimsonText-Italic.woff') format('woff'),
+         url('crimsonText-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
 }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.item-col1 {
+  width: 8.333%;
+}
+
+.item-col2 {
+  width: 16.666%;
+}
+
+.item-col3 {
+  width: 25%;
+}
+
+.item-col4 {
+  width: 33.333%;
+}
+
+.item-col5 {
+  width: 41.666%;
+}
+
+.item-col6 {
+  width: 50%;
+}
+
+.item-col7 {
+  width: 58.333%;
+}
+
+.item-col8 {
+  width: 66.666%;
+}
+
+.item-col9 {
+  width: 75%;
+}
+
+.item-col10 {
+  width: 83.333%;
+}
+
+.item-col11 {
+  width: 91.666%;
+}
+
+.item-col12 {
+  width: 100%;
+}
+
+body {
+  font: normal normal 14px/20px "Crimson Text", "Times New Roman", serif;
+
+  color: #3e3d3d;
+  background: #e3e3e3;
+}
+
+h1 {
+  font: normal normal 35px/200px "Amsdam", "Tahoma", sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  font: normal normal 20px/225px "Amsdam", "Tahoma", sans-serif;
+  text-transform: uppercase;
+
+  color: #3e3d3d;
+}
+
+h3 {
+  font: normal normal 13px/18px "Montserrat", "Tahoma", sans-serif;
+  text-transform: uppercase;
+
+  color: #3e3d3d;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  position: relative;
+
+  min-width: 768px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.clearfix:after {
+    display: table;
+    clear: both;
+
+    content: '';
+}
+
+a.btn {
+  font: normal normal 13px/44px "Montserrat", "Tahoma", sans-serif;
+  text-transform: uppercase;
+}
+
+h2 + p.text {
+  font: normal normal 14px/25px "Crimson Text", "Times New Roman", serif;
+}
+/*header begin*/
+.main-menu {
+  font: normal normal 12px/50px "Montserrat", "Tahoma", sans-serif;
+
+  text-transform: uppercase;
+  color: #aaaaaa;
+}
+/*header end*/
+
+/*start begin*/
+.start {
+  color: #ffffff;
+}
+
+.start p.text {
+  line-height: 25px;
+}
+
+.slider a.btn {
+  font: normal normal 15px/50px "Montserrat", "Tahoma", sans-serif;
+
+  color: #ffffff;
+}
+/*start end*/
+
+/*history begin*/
+.history .date {
+  font: normal normal 13px/18px "Montserrat", "Tahoma", sans-serif;
+}
+
+.history small.date {
+  font-size: 11px;
+}
+/*history end*/
+
+/*portfolio begin*/
+.portfolio a.btn {
+  font-size: 11px;
+}
+/*portfolio end*/
+
+/*price begin*/
+.prices .price span {
+  font: normal normal 28px/40px "Montserrat", "Tahoma", sans-serif;
+}
+
+.prices .price p {
+  font: normal normal 70px/126px "Montserrat", "Tahoma", sans-serif;
+}
+
+.prices p.text {
+  font: italic normal 16px/30px "Crimson Text", "Times New Roman", serif;
+}
+/*price end*/
+
+/*next-project begin*/
+.next-project p {
+  font: normal normal 16px/18px "Montserrat", "Tahoma", sans-serif;
+}
+
+.next-project p.text {
+  font: italic normal 16px/18px "Crimson Text", "Times New Roman", serif;
+}
+/*next-project end*/
+
+/*blog begin*/
+.blog .blog-list-item .date {
+  font: italic normal 12px/18px "Crimson Text", "Times New Roman", serif;
+}
+/*blog end*/
+
+/*clients begin*/
+/*clients end*/
+
+/*testimonials begin*/
+.testimonials {
+  font: italic normal 20px/24px "Crimson Text", "Times New Roman", serif;
+}
+
+.testimonials blockquote {
+  font-size: 20px;
+}
+
+.testimonials p {
+  font-size: 14px;
+}
+
+.testimonials .client {
+  font: normal normal 13px/18px "Crimson Text", "Times New Roman", serif;
+}
+/*testimonials end*/
+
+/*footer begin*/
+footer .email {
+  font: normal normal 13px/18px "Montserrat", "Tahoma", sans-serif;
+}
+
+footer .copyright {
+  font-style: italic;
+}
+/*footer end*/
