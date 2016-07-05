@@ -1,56 +1,56 @@
 @font-face {
-    font-family: 'Amsdam Regular';
-    src: url('Amsdam Regular.eot');
-    src: local('Amsdam Regular'), local('Amsdam Regular'),
-         url('Amsdam Regular.eot?#iefix') format('embedded-opentype'),
-         url('Amsdam Regular.woff') format('woff'),
-         url('Amsdam Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Amsdam Regular';
+  src: url('Amsdam Regular.eot');
+  src: local('Amsdam Regular'), local('Amsdam Regular'),
+   url('Amsdam Regular.eot?#iefix') format('embedded-opentype'),
+   url('Amsdam Regular.woff') format('woff'),
+   url('Amsdam Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url('montserrat-regular.eot');
-    src: local('montserrat-regular'), local('montserrat-regular'),
-         url('montserrat-regular.eot?#iefix') format('embedded-opentype'),
-         url('montserrat-regular.woff') format('woff'),
-         url('montserrat-regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Montserrat';
+  src: url('montserrat-regular.eot');
+  src: local('montserrat-regular'), local('montserrat-regular'),
+   url('montserrat-regular.eot?#iefix') format('embedded-opentype'),
+   url('montserrat-regular.woff') format('woff'),
+   url('montserrat-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url('montserrat-bold.eot');
-    src: local('montserrat bold'), local('montserrat-bold'),
-         url('montserrat-bold.eot?#iefix') format('embedded-opentype'),
-         url('montserrat-bold.woff') format('woff'),
-         url('montserrat-bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'Montserrat';
+  src: url('montserrat-bold.eot');
+  src: local('montserrat bold'), local('montserrat-bold'),
+   url('montserrat-bold.eot?#iefix') format('embedded-opentype'),
+   url('montserrat-bold.woff') format('woff'),
+   url('montserrat-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Crimson Text';
-    src: url('crimsonText-Roman.eot');
-    src: local('crimsonText-Roman'), local('crimsonText-Roman'),
-         url('crimsonText-Roman.eot?#iefix') format('embedded-opentype'),
-         url('crimsonText-Roman.woff') format('woff'),
-         url('crimsonText-Roman.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Crimson Text';
+  src: url('crimsonText-Roman.eot');
+  src: local('crimsonText-Roman'), local('crimsonText-Roman'),
+   url('crimsonText-Roman.eot?#iefix') format('embedded-opentype'),
+   url('crimsonText-Roman.woff') format('woff'),
+   url('crimsonText-Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Crimson Text';
-    src: url('crimsonText-Italic.eot');
-    src: local('crimsonText-Italic'), local('crimsonText-Italic'),
-         url('crimsonText-Italic.eot?#iefix') format('embedded-opentype'),
-         url('crimsonText-Italic.woff') format('woff'),
-         url('crimsonText-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
+  font-family: 'Crimson Text';
+  src: url('crimsonText-Italic.eot');
+  src: local('crimsonText-Italic'), local('crimsonText-Italic'),
+   url('crimsonText-Italic.eot?#iefix') format('embedded-opentype'),
+   url('crimsonText-Italic.woff') format('woff'),
+   url('crimsonText-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
 }
 
 * {
@@ -107,7 +107,21 @@
   width: 100%;
 }
 
+.center {
+  margin: 0 auto;
+  float: none;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
 body {
+  margin: 0 auto;
   font: normal normal 14px/20px "Crimson Text", "Times New Roman", serif;
 
   color: #3e3d3d;
@@ -117,13 +131,27 @@ body {
 h1 {
   font: normal normal 35px/200px "Amsdam", "Tahoma", sans-serif;
   text-transform: uppercase;
+
+  border-top: 5px solid;
+  border-bottom: 5px solid;
+  border-image-source: url("../images/borderline-white.png");
+  border-image-slice: 5;
+  border-image-repeat: repeat;
 }
 
 h2 {
-  font: normal normal 20px/225px "Amsdam", "Tahoma", sans-serif;
+  width: 200px;
+  margin: 0 auto;
+
+  font: normal normal 20px/66px "Amsdam", "Tahoma", sans-serif;
+  text-align: center;
   text-transform: uppercase;
 
   color: #3e3d3d;
+  border-bottom: 5px solid;
+  border-image-source: url("../images/borderline-grey.png");
+  border-image-slice: 5;
+  border-image-repeat: repeat;
 }
 
 h3 {
@@ -137,41 +165,127 @@ p {
   margin: 0;
 }
 
+ul {
+  padding: 0;
+}
+
 .container {
   position: relative;
 
   min-width: 768px;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .clearfix:after {
-    display: table;
-    clear: both;
+  display: table;
+  clear: both;
 
-    content: '';
+  content: '';
 }
 
 a.btn {
-  font: normal normal 13px/44px "Montserrat", "Tahoma", sans-serif;
-  text-transform: uppercase;
+  display: inline-block;
+  width: 134px;
+  height: 40px;
+  padding: 12px 0;
+
+  vertical-align: top;
+  font: normal normal 13px/13px "Montserrat", "Tahoma", sans-serif;
+  text-align: center;
+  text-decoration: none;
+
+  color: #3e3d3e;
+  border: 2px solid #3e3d3d;
 }
 
-h2 + p.text {
+a.btn:hover {
+  color: #cecece;
+  background-color: #3e3d3d;
+}
+
+h2 + p.description {
   font: normal normal 14px/25px "Crimson Text", "Times New Roman", serif;
+  text-align: center;
 }
-/*header begin*/
-.main-menu {
-  font: normal normal 12px/50px "Montserrat", "Tahoma", sans-serif;
 
+/*header begin*/
+body>header {
+  padding: 15px 0;
+  background: #ffffff;
+}
+.logo {
+  display: inline-block;
+}
+.main-menu {
+  float: left;
+  text-align: center;
+  font-size: 0;
+}
+
+.main-menu .row {
+  display: inline-block;
+  text-align: left;
+}
+
+.main-menu a {
+  display: inline-block;
+  margin-right: 18px;
+
+  font: normal normal 12px/34px "Montserrat", "Tahoma", sans-serif;
   text-transform: uppercase;
+  text-decoration: none;
+  vertical-align: top;
+
   color: #aaaaaa;
+}
+
+.main-menu .row:last-child a:last-child {
+  margin-right: 0;
+}
+
+.main-menu a:hover {
+  text-decoration: underline;
+}
+.social {
+  line-height: 34px;
+}
+
+.social a {
+  display: inline-block;
+  width: 16px;
+  height: 10px;
+  margin-left: 2px;
+
+  border-right: 1px solid #a4a4a4;
+  background-image: url("  ../images/social-sprite.png");
+  background-repeat: no-repeat;
+}
+
+.icon-facebook {
+  background-position: -2px 0;
+}
+
+.icon-twitter {
+  background-position: -18px 0;
+}
+
+.icon-behance {
+  background-position: -32px 0;
+}
+
+.social-btn:last-child {
+  border-right: none;
 }
 /*header end*/
 
 /*start begin*/
 .start {
+  text-align: center;
+
   color: #ffffff;
+  background-
 }
 
 .start p.text {
@@ -179,11 +293,148 @@ h2 + p.text {
 }
 
 .slider a.btn {
-  font: normal normal 15px/50px "Montserrat", "Tahoma", sans-serif;
+  font: normal normal 15px/15px "Montserrat", "Tahoma", sans-serif;
 
   color: #ffffff;
 }
 /*start end*/
+
+/*about begin*/
+.about {
+  padding: 64px 0 44px;
+}
+
+.about-bg {
+  display: block;
+  width: 100%;
+  height: 325px;
+
+  background-image: url("../images/about-bg.jpg");
+  background-position: center;
+}
+
+.about-wrap {
+  width: 100%;
+
+  background: #ffffff;
+}
+
+.about .content {
+  padding: 50px 70px;
+}
+
+.about p.text {
+  margin-top: 32px;
+
+  text-align: left;
+}
+
+.about .buttons {
+  margin-top: 30px;
+
+  font-size: 0;
+  text-align: center;
+}
+
+.about .btn {
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.about .btn:last-child {
+  margin-right: 0;
+}
+
+.about-list {
+  margin-top: 36px;
+
+  font-size: 0;
+  text-align: center;
+}
+
+.about-list .row {
+  display: inline-block;
+  margin-bottom: 20px;
+  vertical-align: top;
+}
+
+.about-list .row:last-child {
+  margin-bottom: 0;
+}
+
+.about-list-item {
+  display: inline-block;
+  width: 270px;
+  height: 168px;
+  padding-top: 4px;
+
+  vertical-align: top;
+
+  border-right: 1px solid #b0b0b0;
+}
+
+.row:last-child .about-list-item:last-child {
+  border-right: 0;
+}
+
+.awards:before,
+.jobs:before,
+.happy:before,
+.reviews:before {
+  display: block;
+  width: 41px;
+  height: 40px;
+  margin: 0 auto;
+
+  content: '';
+
+  background: transparent url("../images/about-sprite.png");
+}
+
+.awards::before {
+  background-position: 0 0;
+}
+
+.jobs::before {
+  background-position: -43px 0;
+}
+
+.happy::before {
+  background-position: -84px 0;
+}
+
+.reviews::before {
+  background-position: -126px 0;
+}
+
+.about-list-item p.amount {
+  font: normal normal 45px/84px "Montserrat", "Tahoma", sans-serif;
+}
+/*about end*/
+
+/*services begin*/
+.services {
+  color: #d8d8d8;
+  background: url("../images/services-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.services p.description {
+  color: #cfcfcf;
+}
+
+.services h2 {
+  color: #ffffff;
+  border-image-source: url("../images/borderline-white.png");
+}
+.services .row {
+  width: 50%;
+}
+.services-list-item {
+  display: inline-block;
+}
+/*services end*/
 
 /*history begin*/
 .history .date {
